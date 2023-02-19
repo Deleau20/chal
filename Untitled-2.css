@@ -1,0 +1,113 @@
+
+body{
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+    font-family: 'poppins', sans-serif;
+
+}
+
+.pulse {
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 300px;
+    left: 550px;
+    border-radius: 100%;
+    background: #634edf;
+    animation: pulse 0.7s linear infinite;
+   }
+
+
+   @keyframes pulse {
+    0% {
+        width: 50px;
+        height: 50px;
+     box-shadow: 0 0 0 0 rgba(99,78,223,1);
+    }
+   
+    100% {
+     box-shadow: 0 0 0 100px rgba(99,78,223,.3);
+     width: 100px;
+     height: 100px;
+     opacity: .3;
+    }
+   }
+
+   .nan{
+    color: #634edf;
+    position: relative;
+    top: 500px;
+    left: 320px;
+    width: 500px;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+   }
+
+   /* Animation des lettres */
+
+   .glisseVersDroite {
+    animation: glisseVersDroite 2s ease infinite;
+    position: relative;
+    top: 35px;
+    left: 50px;
+    
+  }
+
+
+  /* Pour la prémière lettre N */
+  @keyframes glisseVersDroite {
+    0% {
+      transform: translateX(30%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  /* Pour la lettre A */
+
+  .disparait {
+    animation: disparait 2s ease-in-out infinite;
+    opacity: 0;
+  }
+  
+  @keyframes disparait {
+    0%{
+      opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+      }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  
+  /* Pour la deuxième lettre N */
+
+  .glisseVersGauche {
+    animation: glisseVersGauche 2s ease infinite;
+    position: relative;
+    right: 200px;
+    bottom: 35px;
+    
+  }
+  
+  @keyframes glisseVersGauche {
+    0% {
+      transform: translateX(0%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(30%);
+      opacity: 1;
+    }
+  }
